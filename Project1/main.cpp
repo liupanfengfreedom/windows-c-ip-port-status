@@ -123,6 +123,7 @@ bool isportopen(int port,bool btcp=true)
         wprintf(L"bind returned success\n");
 
     WSACleanup();
+    closesocket(ListenSocket);
     return 0;
 }
 
